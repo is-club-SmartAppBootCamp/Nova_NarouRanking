@@ -2,6 +2,7 @@ package com.example.narouranking
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
@@ -31,7 +32,10 @@ class ItemListActivity : AppCompatActivity() {
      */
     private var twoPane: Boolean = false
 
+    val URL = "https://api.syosetu.com/novelapi/api/"
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_item_list)
 
@@ -52,6 +56,11 @@ class ItemListActivity : AppCompatActivity() {
         }
 
         setupRecyclerView(item_list)
+
+        //API実行のためインスタンス生成
+        val accessor = executeAPI()
+        //API実行
+        val resultApi = accessor.executeAPI("https://api.syosetu.com/novelapi/api/?out=json&order=weeklypoint")
     }
 
     private fun setupRecyclerView(recyclerView: RecyclerView) {
