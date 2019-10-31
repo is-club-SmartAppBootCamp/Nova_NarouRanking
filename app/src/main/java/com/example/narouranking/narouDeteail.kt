@@ -1,0 +1,44 @@
+package com.example.narouranking
+
+data class narouDeteail(
+    //val allcount: String,//全出力数
+    val title: String,//小説名
+    val ncode: String,//Nコード
+    val userid: String,//作者のユーザID(数値)
+    val writer: String,//作者名
+    val story: String,//あらすじ
+    val biggenre: String,//大ジャンル
+    val genre: String,
+    val gensaku: String,
+    val keyword: String,
+    val general_firstup: String,
+    val general_lastup: String,
+    val novel_type: String,
+    val end: String,
+    val general_all_no: String,
+    val length: String,
+    val time: String,
+    val isstop: String,
+    val isr15: String,
+    val isbl: String,
+    val isgl: String,
+    val iszankoku: String,
+    val istensei: String,
+    val istenni: String,
+    val pc_or_k: String,
+    val global_point: String,
+    val daily_point: String,
+    val weekly_point: String,
+    val monthly_poimt: String,
+    val quarter_point: String,
+    val yearly_point: String,
+    val fav_novel_cnt: String,
+    val impression_cnt: String,
+    val review_cnt: String,
+    val all_point: String,
+    val all_hyoka_cnt: String,
+    val sasie_cnt: String,
+    val kaiwaritu: String,
+    val novelupdated_at: String,
+    val updated_at: String
+)

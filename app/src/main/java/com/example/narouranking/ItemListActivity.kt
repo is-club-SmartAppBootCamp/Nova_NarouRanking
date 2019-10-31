@@ -58,9 +58,12 @@ class ItemListActivity : AppCompatActivity() {
         setupRecyclerView(item_list)
 
         //API実行のためインスタンス生成
-        val accessor = executeAPI()
+        val accessApi = useApi()
         //API実行
-        val resultApi = accessor.executeAPI("https://api.syosetu.com/novelapi/api/?out=json&order=weeklypoint")
+        val narou = accessApi.executeAPI("https://api.syosetu.com/novelapi/api/?out=json&order=weeklypoint")
+
+        print(narou)
+
     }
 
     private fun setupRecyclerView(recyclerView: RecyclerView) {
